@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewData["Title"] = "ReadExcel";
+}
+
+<h2>Upload Excel File (XLSX, XLS, CSV)</h2>
+
+<form asp-controller="Spreadsheets" asp-action="ReadExcels" method="post" enctype="multipart/form-data">
+    <input type="file" name="excelFile" accept=".xlsx,.xls,.csv" required />
+    <button type="submit" class="btn btn-primary">Upload & Read</button>
+</form>
+
+@if (ViewBag.Error != null)
+{
+    <p style="color:red">@ViewBag.Error</p>
+}
+
+@if (ViewBag.Cells != null)
+{
+    <h3>Read Cells (A2:A10):</h3>
+    <ul>
+        @foreach (string line in ViewBag.Cells)
+        {
+            <li>@line</li>
+        }
+    </ul>
+    <p><strong>Sum:</strong> @ViewBag.Sum</p>
+    <p><strong>Max:</strong> @ViewBag.Max</p>
+}
