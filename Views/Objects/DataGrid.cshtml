@@ -1,0 +1,39 @@
+﻿@model System.Data.DataTable
+
+@{
+    ViewData["Title"] = "DataGrid";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Import Excel File</h2>
+
+<form asp-action="DataGrid" asp-controller="Objects" method="post" enctype="multipart/form-data">
+    <input type="file" name="excelFile" accept=".xlsx,.xls,.csv" required />
+    <button type="submit">Upload & View</button>
+</form>
+
+@if (Model != null)
+{
+    <h3>Excel Data</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                @foreach (System.Data.DataColumn col in Model.Columns)
+                {
+                    <th>@col.ColumnName</th>
+                }
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (System.Data.DataRow row in Model.Rows)
+            {
+                <tr>
+                    @foreach (var item in row.ItemArray)
+                    {
+                        <td>@item</td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+}

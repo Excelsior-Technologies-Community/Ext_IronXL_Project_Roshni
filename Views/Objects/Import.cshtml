@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "Import";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Import Excel File</h2>
+
+<form asp-controller="Objects" asp-action="Import" enctype="multipart/form-data" method="post">
+    <div>
+        <label>Select Excel File:</label>
+        <input type="file" name="excelFile" accept=".xlsx,.xls,.csv" required />
+    </div>
+    <br />
+    <button type="submit">Import to Database</button>
+</form>
+
+@if (TempData["Message"] != null)
+{
+    <p style="color:green">@TempData["Message"]</p>
+}

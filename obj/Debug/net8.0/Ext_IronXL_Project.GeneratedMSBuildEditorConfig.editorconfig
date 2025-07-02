@@ -34,12 +34,36 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/Company Work/Ext_IronXL_Project/Views/Objects/DataGrid.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2JqZWN0c1xEYXRhR3JpZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Company Work/Ext_IronXL_Project/Views/Objects/EditMetadata.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2JqZWN0c1xFZGl0TWV0YWRhdGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Company Work/Ext_IronXL_Project/Views/Objects/Import.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2JqZWN0c1xJbXBvcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Company Work/Ext_IronXL_Project/Views/Objects/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2JqZWN0c1xVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/Company Work/Ext_IronXL_Project/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/Company Work/Ext_IronXL_Project/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Company Work/Ext_IronXL_Project/Views/Spreadsheets/ConvertFile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ByZWFkc2hlZXRzXENvbnZlcnRGaWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Company Work/Ext_IronXL_Project/Views/Spreadsheets/ExportExcel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ByZWFkc2hlZXRzXEV4cG9ydEV4Y2VsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/Company Work/Ext_IronXL_Project/Views/Spreadsheets/ReadExcel.cshtml]

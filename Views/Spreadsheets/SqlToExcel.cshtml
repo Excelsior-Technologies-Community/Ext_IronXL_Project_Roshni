@@ -3,7 +3,7 @@
     ViewData["Title"] = "SqlToExcel";
 }
 
-<form asp-action="ExportToExcel" method="post">
+<form asp-action="ExportSqlToExcel" asp-controller="Spreadsheets" method="post">
     <div class="form-group">
         <label>Table Name:</label>
         <input type="text" name="tableName" class="form-control" required />

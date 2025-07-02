@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewData["Title"] = "ExportExcel";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Export Excel Using IronXL</h2>
+
+<form asp-action="ExportExcelFiles" asp-controller="Spreadsheets" method="post">
+    <button type="submit" class="btn btn-primary">Download Excel</button>
+</form>

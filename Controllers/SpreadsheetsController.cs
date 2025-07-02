@@ -64,7 +64,7 @@ namespace Ext_IronXL_Project.Controllers
         }
 
         [HttpPost]
-        public IActionResult ExportToExcel(string tableName, string connectionString)
+        public IActionResult ExportSqlToExcel(string tableName, string connectionString)
         {
             IronXL.License.LicenseKey = "IRONSUITE.EXCELSIORTECHNOLOGIES.8187-3708CDF60F-B3MFZGNEBBLCW6W5-BXTNM4MPHNMU-OTOEBFCLRDSW-ETTEAFOQHJNT-KBYQIADCMQPR-QVRLMSV47S2Q-GLWMCW-TRH25WCBAZKQUA-SANDBOX-BDIXLR.TRIAL.EXPIRES.27.MAR.2026";
 
@@ -92,7 +92,7 @@ namespace Ext_IronXL_Project.Controllers
                     return View("SqlToExcel");
                 }
 
-                // Load dataset into Excel
+                
                 WorkBook workBook = WorkBook.Load(ds);
                 workBook.DefaultWorkSheet.Name = tableName;
 
@@ -116,5 +116,110 @@ namespace Ext_IronXL_Project.Controllers
             }
         }
 
+        [HttpGet]
+        public IActionResult ExportExcel()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult ExportExcelFiles()
+        {
+            IronXL.License.LicenseKey = "IRONSUITE.EXCELSIORTECHNOLOGIES.8187-3708CDF60F-B3MFZGNEBBLCW6W5-BXTNM4MPHNMU-OTOEBFCLRDSW-ETTEAFOQHJNT-KBYQIADCMQPR-QVRLMSV47S2Q-GLWMCW-TRH25WCBAZKQUA-SANDBOX-BDIXLR.TRIAL.EXPIRES.27.MAR.2026";
+
+            WorkBook workBook = WorkBook.Create();
+
+            
+            WorkSheet workSheet = workBook.CreateWorkSheet("new_sheet");
+
+            
+            workSheet["A1"].Value = "Hello World";
+            workSheet["A2"].Style.BottomBorder.SetColor("#ff6600");
+
+            byte[] fileBytes = workBook.ToByteArray();
+
+            
+            return File(fileBytes,
+                        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                        "sample.xlsx");
+        }
+
+        public IActionResult ConvertFile()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult ConvertFiles(IFormFile excelFile, string format)
+        {
+            IronXL.License.LicenseKey = "IRONSUITE.EXCELSIORTECHNOLOGIES.8187-3708CDF60F-B3MFZGNEBBLCW6W5-BXTNM4MPHNMU-OTOEBFCLRDSW-ETTEAFOQHJNT-KBYQIADCMQPR-QVRLMSV47S2Q-GLWMCW-TRH25WCBAZKQUA-SANDBOX-BDIXLR.TRIAL.EXPIRES.27.MAR.2026";
+
+            if (excelFile == null || excelFile.Length == 0 || string.IsNullOrEmpty(format))
+            {
+                TempData["Error"] = "Please upload a file and select a format.";
+                return RedirectToAction("ConvertFile");
+            }
+
+            // Load the uploaded file into IronXL
+            using (var stream = new MemoryStream())
+            {
+                excelFile.CopyTo(stream);
+                stream.Position = 0;
+
+                WorkBook workBook = WorkBook.Load(stream);
+                byte[] resultBytes;
+                string contentType;
+                string fileName;
+
+                switch (format.ToLower())
+                {
+                    case "xlsx":
+                        resultBytes = workBook.ToByteArray();
+                        contentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+                        fileName = "converted.xlsx";
+                        break;
+
+                    case "csv":
+                        string csvPath = Path.GetTempFileName();
+                        workBook.SaveAsCsv(csvPath);
+                        resultBytes = System.IO.File.ReadAllBytes(csvPath);
+                        System.IO.File.Delete(csvPath);
+                        contentType = "text/csv";
+                        fileName = "converted.csv";
+                        break;
+
+                    case "json":
+                        string jsonPath = Path.GetTempFileName();
+                        workBook.SaveAsJson(jsonPath);
+                        resultBytes = System.IO.File.ReadAllBytes(jsonPath);
+                        System.IO.File.Delete(jsonPath);
+                        contentType = "application/json";
+                        fileName = "converted.json";
+                        break;
+
+                    case "xml":
+                        string xmlPath = Path.GetTempFileName();
+                        workBook.SaveAsXml(xmlPath);
+                        resultBytes = System.IO.File.ReadAllBytes(xmlPath);
+                        System.IO.File.Delete(xmlPath);
+                        contentType = "application/xml";
+                        fileName = "converted.xml";
+                        break;
+
+                    case "html":
+                        string htmlContent = workBook.ExportToHtmlString();
+                        resultBytes = System.Text.Encoding.UTF8.GetBytes(htmlContent);
+                        contentType = "text/html";
+                        fileName = "converted.html";
+                        break;
+
+                    default:
+                        TempData["Error"] = "Unsupported format.";
+                        return RedirectToAction("ConvertFile");
+                }
+
+                return File(resultBytes, contentType, fileName);
+            }
+        }
     }
 }

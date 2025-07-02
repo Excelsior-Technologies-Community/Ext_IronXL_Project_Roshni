@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "EditMetadata";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit Excel Metadata</h2>
+
+<form asp-controller="Objects" asp-action="EditMetadata" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label>Select Excel File</label>
+        <input type="file" name="excelFile" class="form-control" accept=".xlsx,.xls" required />
+    </div>
+
+    <div class="form-group mt-2">
+        <label>Author</label>
+        <input type="text" name="author" class="form-control" required />
+    </div>
+
+    <div class="form-group mt-2">
+        <label>Title</label>
+        <input type="text" name="title" class="form-control" required />
+    </div>
+
+    <div class="form-group mt-2">
+        <label>Comments</label>
+        <input type="text" name="comments" class="form-control" />
+    </div>
+
+    <div class="form-group mt-2">
+        <label>Keywords</label>
+        <input type="text" name="keywords" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Upload & Update Metadata</button>
+</form>
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-info mt-3">@ViewBag.Message</div>
+}

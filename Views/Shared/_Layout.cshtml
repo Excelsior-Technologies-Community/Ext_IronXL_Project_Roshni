@@ -32,10 +32,25 @@
                             <ul class="dropdown-menu" aria-labelledby="rsDocumentDropdown">
                                 <li><a class="nav-link text-dark" asp-area="" asp-controller="Spreadsheets" asp-action="ReadExcel">ReadExcel</a></li>
                                 <li><a class="nav-link text-dark" asp-area="" asp-controller="Spreadsheets" asp-action="SqlToExcel">SqlToExcel</a></li>
-                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Spreadsheets" asp-action="CompressPdf">CompressPdf</a></li>
+                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Spreadsheets" asp-action="ExportExcel">ExportExcel</a></li>
+                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Spreadsheets" asp-action="ConvertFile">ConvertFile</a></li>
 
                             </ul>
                         </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="rsDocumentDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Objects
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="rsDocumentDropdown">
+                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Objects" asp-action="Import">Import</a></li>
+                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Objects" asp-action="DataGrid">DataGrid</a></li>
+                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Objects" asp-action="Update">Update</a></li>
+                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Objects" asp-action="EditMetadata">EditMetadata</a></li>
+
+                            </ul>
+                        </li>
+
                     </ul>
                 </div>
             </div>

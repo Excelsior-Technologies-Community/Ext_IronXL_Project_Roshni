@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewData["Title"] = "ConvertFile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Convert Spreadsheet File</h2>
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+
+<form asp-action="ConvertFiles" asp-controller="Spreadsheets" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label>Select Excel File:</label>
+        <input type="file" name="excelFile" accept=".xls,.xlsx,.csv,.tsv" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label>Select Output Format:</label>
+        <select name="format" class="form-control" required>
+            <option value="">-- Select Format --</option>
+            <option value="xlsx">XLSX</option>
+            <option value="csv">CSV</option>
+            <option value="json">JSON</option>
+            <option value="xml">XML</option>
+            <option value="html">HTML</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Convert & Download</button>
+</form>
