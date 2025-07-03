@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "F:\\Company Work\\Ext_IronXL_Project\\wwwroot\\downloads\\edited_sample.xlsx",
+      "PackagePath": "staticwebassets\\downloads\\edited_sample.xlsx"
+    },
+    {
       "Id": "F:\\Company Work\\Ext_IronXL_Project\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },

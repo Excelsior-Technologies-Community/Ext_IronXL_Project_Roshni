@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WmQ7st/3koybpD+jrf2eLY7ElUnWiuTwtv27f1PwgfY=",
+  "Hash": "MpKy4NUvlOUdtMEh2pHzCfNe7cWDC1J+Ru4Dg8mrCBU=",
   "Source": "Ext_IronXL_Project",
   "BasePath": "_content/Ext_IronXL_Project",
   "Mode": "Default",
@@ -72,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "F:\\Company Work\\Ext_IronXL_Project\\wwwroot\\downloads\\edited_sample.xlsx",
+      "SourceId": "Ext_IronXL_Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\Company Work\\Ext_IronXL_Project\\wwwroot\\",
+      "BasePath": "_content/Ext_IronXL_Project",
+      "RelativePath": "downloads/edited_sample.xlsx",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\downloads\\edited_sample.xlsx"
     },
     {
       "Identity": "F:\\Company Work\\Ext_IronXL_Project\\wwwroot\\favicon.ico",

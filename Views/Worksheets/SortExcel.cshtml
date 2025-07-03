@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewData["Title"] = "SortExcel";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Sort Excel Ranges</h2>
+
+<form asp-controller="Worksheets" asp-action="SortExcel" method="post" enctype="multipart/form-data">
+    <div>
+        <label>Select Excel File (.xlsx):</label><br />
+        <input type="file" name="excelFile" accept=".xlsx" required />
+    </div>
+
+    <br />
+    <div>
+        <label>Range to Sort (e.g., A1:D20):</label><br />
+        <input type="text" name="range" value="A1:D20" />
+    </div>
+
+    <div>
+        <label>Sort Range By Column (e.g., C):</label><br />
+        <input type="text" name="sortByColumn" value="C" />
+    </div>
+
+    <div>
+        <label>Column to Sort Individually (e.g., 1 for B):</label><br />
+        <input type="number" name="columnIndex" min="0" />
+    </div>
+
+    <br />
+    <button type="submit">Sort and Download</button>
+</form>
+
+@if (ViewBag.Message != null)
+{
+    <p style="color: green">@ViewBag.Message</p>
+}

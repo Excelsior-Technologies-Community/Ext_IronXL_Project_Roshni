@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "FormulaEditor";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Excel Formula Editor</h2>
+
+<form asp-controller="Worksheets" asp-action="FormulaEditor" method="post" enctype="multipart/form-data">
+    <div>
+        <label>Select Excel File (.xlsx):</label>
+        <input type="file" name="excelFile" accept=".xlsx" required />
+    </div>
+
+    <div>
+        <label>Enter Formulas (One per line, format: Cell=Formula):</label><br />
+        <textarea name="formulas" rows="5" cols="50" placeholder="Example:&#10;A1=Sum(B8:C12)&#10;B8=C9/C11&#10;G30=Max(C3:C7)"></textarea>
+    </div>
+
+    <div>
+        <button type="submit">Apply Formulas & Download</button>
+    </div>
+</form>
+
+@if (ViewBag.Message != null)
+{
+    <p style="color: green">@ViewBag.Message</p>
+}

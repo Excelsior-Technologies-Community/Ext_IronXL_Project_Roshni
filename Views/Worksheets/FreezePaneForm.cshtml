@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "FreezePaneForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Apply Freeze Panes to Excel</h2>
+
+<form asp-controller="Worksheets" asp-action="ApplyFreezePane" method="post" enctype="multipart/form-data">
+    <div>
+        <label>Select Excel File (.xls):</label>
+        <input type="file" name="excelFile" accept=".xls,.xlsx" required />
+    </div>
+    <br />
+    <button type="submit">Apply Freeze Panes</button>
+</form>
+
+@if (ViewBag.Error != null)
+{
+    <p style="color:red">@ViewBag.Error</p>
+}

@@ -46,6 +46,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2JqZWN0c1xJbXBvcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/Company Work/Ext_IronXL_Project/Views/Objects/PrintSetup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2JqZWN0c1xQcmludFNldHVwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Company Work/Ext_IronXL_Project/Views/Objects/ProtectExcel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2JqZWN0c1xQcm90ZWN0RXhjZWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/Company Work/Ext_IronXL_Project/Views/Objects/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2JqZWN0c1xVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -72,6 +80,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [F:/Company Work/Ext_IronXL_Project/Views/Spreadsheets/SqlToExcel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ByZWFkc2hlZXRzXFNxbFRvRXhjZWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Company Work/Ext_IronXL_Project/Views/Worksheets/CreateChart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya3NoZWV0c1xDcmVhdGVDaGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Company Work/Ext_IronXL_Project/Views/Worksheets/FormulaEditor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya3NoZWV0c1xGb3JtdWxhRWRpdG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Company Work/Ext_IronXL_Project/Views/Worksheets/FreezePaneForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya3NoZWV0c1xGcmVlemVQYW5lRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Company Work/Ext_IronXL_Project/Views/Worksheets/SelectRange.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya3NoZWV0c1xTZWxlY3RSYW5nZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Company Work/Ext_IronXL_Project/Views/Worksheets/SortExcel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya3NoZWV0c1xTb3J0RXhjZWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/Company Work/Ext_IronXL_Project/Views/_ViewImports.cshtml]

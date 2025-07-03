@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "CreateChart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create Excel Chart</h2>
+
+<form asp-action="CreateChart" asp-controller="Worksheets" method="post" enctype="multipart/form-data">
+    <label>Upload Excel File (.xlsx):</label><br />
+    <input type="file" name="excelFile" required />
+    <br /><br />
+    <button type="submit">Generate Chart</button>
+</form>
+
+@if (ViewBag.Message != null)
+{
+    <p style="color: green;">@ViewBag.Message</p>
+}
+@if (ViewBag.DownloadPath != null)
+{
+    <p>
+        <a href="@Url.Action("DownloadChart", "Worksheets", new { fileName = ViewBag.DownloadPath })" target="_blank">
+            Download Generated Excel with Chart
+        </a>
+    </p>
+}
+

@@ -47,10 +47,25 @@
                                 <li><a class="nav-link text-dark" asp-area="" asp-controller="Objects" asp-action="DataGrid">DataGrid</a></li>
                                 <li><a class="nav-link text-dark" asp-area="" asp-controller="Objects" asp-action="Update">Update</a></li>
                                 <li><a class="nav-link text-dark" asp-area="" asp-controller="Objects" asp-action="EditMetadata">EditMetadata</a></li>
+                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Objects" asp-action="ProtectExcel">ProtectExcel</a></li>
+                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Objects" asp-action="PrintSetup">PrintSetup</a></li>
 
                             </ul>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="rsDocumentDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Worksheets
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="rsDocumentDropdown">
+                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Worksheets" asp-action="FormulaEditor">Formula</a></li>
+                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Worksheets" asp-action="SortExcel">SortExcel</a></li>
+                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Worksheets" asp-action="SelectRange">SelectRange</a></li>
+                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Worksheets" asp-action="CreateChart">CreateChart</a></li>
+                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Worksheets" asp-action="FreezePaneForm">FreezePaneForm</a></li>
+                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Worksheets" asp-action="PrintSetup">PrintSetup</a></li>
 
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>

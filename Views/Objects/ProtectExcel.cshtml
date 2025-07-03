@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewData["Title"] = "ProtectExcel";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Protect/Unprotect Excel File</h2>
+
+<form asp-controller="Objects" asp-action="ProtectExcel" enctype="multipart/form-data" method="post">
+    <div>
+        <label>Select Excel File:</label>
+        <input type="file" name="excelFile" accept=".xlsx" required />
+    </div>
+    <div>
+        <label>Password:</label>
+        <input type="text" name="password" value="IronSoftware" />
+    </div>
+    <div>
+        <label>Action:</label>
+        <select name="action">
+            <option value="encrypt">Encrypt Workbook</option>
+            <option value="decrypt">Decrypt Workbook</option>
+            <option value="protectSheet">Protect Sheet</option>
+            <option value="unprotectSheet">Unprotect Sheet</option>
+        </select>
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+</form>
+
+@if (ViewBag.Message != null)
+{
+    <p style="color: green">@ViewBag.Message</p>
+}

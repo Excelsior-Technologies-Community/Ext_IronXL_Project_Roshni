@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ext_IronXL_Project")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6fd9d2766f926db8469ddda68f5678ac36475621")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+663616e67ba3485dc5a31c1cba7bbd5925e19907")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ext_IronXL_Project")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ext_IronXL_Project")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

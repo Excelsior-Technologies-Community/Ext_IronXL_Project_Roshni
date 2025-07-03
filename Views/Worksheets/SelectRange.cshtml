@@ -1,0 +1,42 @@
+﻿@model Tuple<List<string>, List<List<string>>>
+
+@{
+    ViewData["Title"] = "SelectRange";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Select Excel Range</h2>
+
+<form asp-controller="Worksheets" asp-action="SelectRange" method="post" enctype="multipart/form-data">
+    <label>Upload Excel File (.xls/.xlsx):</label><br />
+    <input type="file" name="excelFile" required />
+    <br /><br />
+    <label>Enter Range (e.g., A2:A8):</label><br />
+    <input type="text" name="range" value="A2:A8" />
+    <br /><br />
+    <button type="submit">Read Excel</button>
+</form>
+
+@if (Model != null)
+{
+    <h3>Selected Range Output:</h3>
+    <ul>
+        @foreach (var val in Model.Item1)
+        {
+            <li>@val</li>
+        }
+    </ul>
+
+    <h3>Full Worksheet Rows:</h3>
+    <table border="1" cellpadding="5">
+        @foreach (var row in Model.Item2)
+        {
+            <tr>
+                @foreach (var cell in row)
+                {
+                    <td>@cell</td>
+                }
+            </tr>
+        }
+    </table>
+}

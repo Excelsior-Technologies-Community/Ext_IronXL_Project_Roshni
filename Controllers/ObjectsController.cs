@@ -5,6 +5,8 @@ using System.IO;
 using IronXL;
 using System.Data;
 using System.Data.SqlClient;
+using IronXL.Printing;
+using System.Threading.Tasks;
 
 namespace Ext_IronXL_Project.Controllers
 {
@@ -66,7 +68,7 @@ namespace Ext_IronXL_Project.Controllers
                         {
                             conn.Open();
 
-                            // Build dynamic insert for first 5 columns
+                            
                             string query = "INSERT INTO ImportedData (Column1, Column2, Column3, Column4, Column5) VALUES (@c1, @c2, @c3, @c4, @c5)";
                             using (SqlCommand cmd = new SqlCommand(query, conn))
                             {
@@ -122,11 +124,11 @@ namespace Ext_IronXL_Project.Controllers
                     excelFile.CopyTo(stream);
                     stream.Position = 0;
 
-                    // Load workbook using IronXL
+                    
                     WorkBook workBook = WorkBook.Load(stream);
                     WorkSheet workSheet = workBook.DefaultWorkSheet;
 
-                    // Convert to DataTable
+                    
                     dataTable = workSheet.ToDataTable(true);
                 }
             }
@@ -161,16 +163,16 @@ namespace Ext_IronXL_Project.Controllers
                 var workBook = WorkBook.Load(stream);
                 var sheet = workBook.WorkSheets.First();
 
-                var headers = sheet.Rows[0].Select(cell => cell.Text).ToList(); // Read header from first row
+                var headers = sheet.Rows[0].Select(cell => cell.Text).ToList(); 
 
                 using SqlConnection conn = new SqlConnection(_connectionString);
                 conn.Open();
 
-                for (int row = 1; row < sheet.RowCount; row++) // Skip header (row 0)
+                for (int row = 1; row < sheet.RowCount; row++) 
                 {
                     var data = sheet.Rows[row];
 
-                    // Build dictionary of column names and values
+                    
                     Dictionary<string, object> rowData = new Dictionary<string, object>();
                     for (int col = 0; col < headers.Count; col++)
                     {
@@ -179,13 +181,13 @@ namespace Ext_IronXL_Project.Controllers
                         rowData[colName] = value ?? DBNull.Value;
                     }
 
-                    // Assume "Id" is the primary key for matching
+                    
                     if (!rowData.ContainsKey("Id"))
                         continue;
 
                     var idValue = rowData["Id"];
 
-                    // Check if row with that Id exists
+                    
                     string checkSql = $"SELECT COUNT(*) FROM {tableName} WHERE Id = @Id";
                     using var checkCmd = new SqlCommand(checkSql, conn);
                     checkCmd.Parameters.AddWithValue("@Id", idValue);
@@ -193,12 +195,12 @@ namespace Ext_IronXL_Project.Controllers
 
                     if (exists > 0)
                     {
-                        // Generate dynamic update SQL
+                        
                         var setParts = headers.Where(h => h != "Id").Select(h => $"{h} = @{h}");
                         string updateSql = $"UPDATE {tableName} SET {string.Join(", ", setParts)} WHERE Id = @Id";
                         using var updateCmd = new SqlCommand(updateSql, conn);
 
-                        // Add parameters
+                        
                         foreach (var kvp in rowData)
                             updateCmd.Parameters.AddWithValue("@" + kvp.Key, kvp.Value ?? DBNull.Value);
 
@@ -206,13 +208,13 @@ namespace Ext_IronXL_Project.Controllers
                     }
                     else
                     {
-                        // Generate dynamic insert SQL
+                        
                         string cols = string.Join(", ", headers);
                         string vals = string.Join(", ", headers.Select(h => "@" + h));
                         string insertSql = $"INSERT INTO {tableName} ({cols}) VALUES ({vals})";
                         using var insertCmd = new SqlCommand(insertSql, conn);
 
-                        // Add parameters
+                        
                         foreach (var kvp in rowData)
                             insertCmd.Parameters.AddWithValue("@" + kvp.Key, kvp.Value ?? DBNull.Value);
 
@@ -255,17 +257,17 @@ namespace Ext_IronXL_Project.Controllers
 
                 var workBook = WorkBook.Load(stream);
 
-                // Set metadata
+                
                 workBook.Metadata.Author = author;
                 workBook.Metadata.Title = title;
                 workBook.Metadata.Comments = comments;
                 workBook.Metadata.Keywords = keywords;
 
-                // Optional: Read existing dates
+                
                 DateTime? created = workBook.Metadata.Created;
                 DateTime? printed = workBook.Metadata.LastPrinted;
 
-                // Save edited file to wwwroot/downloads/
+                
                 string outputDir = Path.Combine(_env.WebRootPath, "downloads");
                 if (!Directory.Exists(outputDir))
                     Directory.CreateDirectory(outputDir);
@@ -282,5 +284,150 @@ namespace Ext_IronXL_Project.Controllers
 
             return View();
         }
+
+        [HttpGet]
+        public IActionResult ProtectExcel()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ProtectExcel(IFormFile excelFile, string password, string action)
+        {
+            IronXL.License.LicenseKey = "IRONSUITE.EXCELSIORTECHNOLOGIES.8187-3708CDF60F-B3MFZGNEBBLCW6W5-BXTNM4MPHNMU-OTOEBFCLRDSW-ETTEAFOQHJNT-KBYQIADCMQPR-QVRLMSV47S2Q-GLWMCW-TRH25WCBAZKQUA-SANDBOX-BDIXLR.TRIAL.EXPIRES.27.MAR.2026";
+
+            if (excelFile == null || excelFile.Length == 0)
+            {
+                ViewBag.Message = "Please select a valid Excel file.";
+                return View();
+            }
+
+            // Ensure correct extension
+            string tempFilePath = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString() + ".xlsx");
+
+            using (var stream = new FileStream(tempFilePath, FileMode.Create))
+            {
+                await excelFile.CopyToAsync(stream);
+            }
+
+            try
+            {
+                WorkBook workBook = null;
+
+                if (action == "decrypt")
+                {
+                    workBook = WorkBook.Load(tempFilePath, password);
+                    workBook.Password = null;
+                    workBook.SaveAs(tempFilePath);
+                    ViewBag.Message = "Workbook decrypted successfully.";
+                }
+                else
+                {
+                    workBook = WorkBook.Load(tempFilePath);
+                    WorkSheet sheet = workBook.DefaultWorkSheet;
+
+                    switch (action)
+                    {
+                        case "encrypt":
+                            workBook.Encrypt(password);
+                            workBook.SaveAs(tempFilePath);
+                            ViewBag.Message = "Workbook encrypted successfully.";
+                            break;
+
+                        case "protectSheet":
+                            sheet.ProtectSheet(password);
+                            workBook.SaveAs(tempFilePath);
+                            ViewBag.Message = "Worksheet protected successfully.";
+                            break;
+
+                        case "unprotectSheet":
+                            sheet.UnprotectSheet();
+                            workBook.SaveAs(tempFilePath);
+                            ViewBag.Message = "Worksheet unprotected successfully.";
+                            break;
+                    }
+                }
+
+                byte[] fileBytes = System.IO.File.ReadAllBytes(tempFilePath);
+                string fileName = Path.GetFileNameWithoutExtension(excelFile.FileName) + "_protected.xlsx";
+                return File(fileBytes, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", fileName);
+            }
+            catch
+            {
+                ViewBag.Message = "Error processing the Excel file. Check if the password is correct.";
+                return View();
+            }
+            finally
+            {
+                if (System.IO.File.Exists(tempFilePath))
+                    System.IO.File.Delete(tempFilePath);
+            }
+        }
+
+        [HttpGet]
+        public IActionResult PrintSetup()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> PrintSetup(IFormFile excelFile, string headerText, string footerText, double headerMargin, string paperSize, string orientation, bool noColor)
+        {
+            IronXL.License.LicenseKey = "IRONSUITE.EXCELSIORTECHNOLOGIES.8187-3708CDF60F-B3MFZGNEBBLCW6W5-BXTNM4MPHNMU-OTOEBFCLRDSW-ETTEAFOQHJNT-KBYQIADCMQPR-QVRLMSV47S2Q-GLWMCW-TRH25WCBAZKQUA-SANDBOX-BDIXLR.TRIAL.EXPIRES.27.MAR.2026";
+
+            if (excelFile == null || excelFile.Length == 0)
+            {
+                ViewBag.Message = "Please upload a valid Excel file.";
+                return View();
+            }
+
+            string tempFilePath = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString() + ".xlsx");
+
+            using (var stream = new FileStream(tempFilePath, FileMode.Create))
+            {
+                await excelFile.CopyToAsync(stream);
+            }
+
+            try
+            {
+                var workBook = WorkBook.Load(tempFilePath);
+                var workSheet = workBook.DefaultWorkSheet;
+
+                // Header and Footer
+                workSheet.Header.Center = headerText;
+                workSheet.Footer.Center = footerText;
+
+                // Header Margin
+                workSheet.PrintSetup.HeaderMargin = headerMargin;
+
+                // Paper Size
+                if (Enum.TryParse<PaperSize>(paperSize, out var size))
+                    workSheet.PrintSetup.PaperSize = size;
+
+                // Orientation
+                workSheet.PrintSetup.PrintOrientation = orientation == "Landscape" ? PrintOrientation.Landscape : PrintOrientation.Portrait;
+
+                // Color settings
+                workSheet.PrintSetup.NoColor = noColor;
+
+                workBook.SaveAs(tempFilePath);
+
+                byte[] fileBytes = System.IO.File.ReadAllBytes(tempFilePath);
+                string fileName = Path.GetFileNameWithoutExtension(excelFile.FileName) + "_PrintSetup.xlsx";
+                return File(fileBytes, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", fileName);
+            }
+            catch
+            {
+                ViewBag.Message = "Error processing the Excel file.";
+                return View();
+            }
+            finally
+            {
+                if (System.IO.File.Exists(tempFilePath))
+                    System.IO.File.Delete(tempFilePath);
+            }
+        }
+
+
     }
 }
