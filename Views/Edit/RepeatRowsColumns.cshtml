@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewData["Title"] = "RepeatRowsColumns";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Repeat Rows and Columns</h2>
+
+<form asp-controller="Edit" asp-action="RepeatRowsColumns" method="post" enctype="multipart/form-data">
+    <div>
+        <label>Select Excel File:</label>
+        <input type="file" name="excelFile" accept=".xlsx" required />
+    </div>
+    <br />
+    <div>
+        <label>Repeat Rows (From):</label>
+        <input type="number" name="repeatRowFrom" min="1" required />
+        <label>To:</label>
+        <input type="number" name="repeatRowTo" min="1" required />
+    </div>
+    <br />
+    <div>
+        <label>Repeat Columns (From):</label>
+        <input type="number" name="repeatColFrom" min="1" required />
+        <label>To:</label>
+        <input type="number" name="repeatColTo" min="1" required />
+    </div>
+    <br />
+    <div>
+        <label>Set Column Break After (Column Number):</label>
+        <input type="number" name="columnBreakAfter" min="1" required />
+    </div>
+    <br />
+    <button type="submit">Submit</button>
+</form>
+
+@if (TempData["Message"] != null)
+{
+    <p style="color: green">@TempData["Message"]</p>
+}
+
+@if (TempData["DownloadPath"] != null)
+{
+    <a href="@TempData["DownloadPath"]" download>Download Result File</a>
+}

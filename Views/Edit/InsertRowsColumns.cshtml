@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewData["Title"] = "InsertRowsColumns";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Insert Rows and Columns</h2>
+
+<form method="post" enctype="multipart/form-data" asp-controller="Edit" asp-action="InsertRowsColumns">
+    <div>
+        <label>Select Excel File (.xlsx):</label>
+        <input type="file" name="excelFile" required />
+    </div>
+    <div>
+        <label>Insert Before Row Number:</label>
+        <input type="number" name="rowNumber" min="1" required />
+    </div>
+    <div>
+        <label>Insert Before Column Number:</label>
+        <input type="number" name="columnNumber" min="1" required />
+    </div>
+    <button type="submit">Insert and Save</button>
+</form>
+
+@if (TempData["Message"] != null)
+{
+    <p>@TempData["Message"]</p>
+}
+
+@if (TempData["DownloadPath"] != null)
+{
+    <a href="@TempData["DownloadPath"]" download>Download Modified File</a>
+}

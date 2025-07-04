@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewData["Title"] = "GroupUngroup";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Group & Ungroup Rows and Columns</h2>
+
+<form method="post" enctype="multipart/form-data" asp-action="GroupUngroup">
+    <div>
+        <label>Upload Excel File (.xlsx):</label>
+        <input type="file" name="excelFile" required />
+    </div>
+
+    <h3>Group Rows</h3>
+    <div>
+        <label>From Row:</label>
+        <input type="number" name="groupRowFrom" min="1" required />
+        <label>To Row:</label>
+        <input type="number" name="groupRowTo" min="1" required />
+    </div>
+
+    <h3>Ungroup Rows</h3>
+    <div>
+        <label>From Row:</label>
+        <input type="number" name="ungroupRowFrom" min="1" required />
+        <label>To Row:</label>
+        <input type="number" name="ungroupRowTo" min="1" required />
+    </div>
+
+    <h3>Group Columns</h3>
+    <div>
+        <label>From Column (e.g. A):</label>
+        <input type="text" name="groupColFrom" required />
+        <label>To Column (e.g. F):</label>
+        <input type="text" name="groupColTo" required />
+    </div>
+
+    <h3>Ungroup Columns</h3>
+    <div>
+        <label>From Column (e.g. C):</label>
+        <input type="text" name="ungroupColFrom" required />
+        <label>To Column (e.g. D):</label>
+        <input type="text" name="ungroupColTo" required />
+    </div>
+
+    <button type="submit">Apply</button>
+</form>
+
+@if (TempData["Message"] != null)
+{
+    <p><strong>@TempData["Message"]</strong></p>
+}
+
+@if (TempData["DownloadPath"] != null)
+{
+    <p><a href="@TempData["DownloadPath"]" download>Download Grouped Excel File</a></p>
+}

@@ -304,6 +304,62 @@ namespace Ext_IronXL_Project.Controllers
             ViewBag.Error = "Please upload a valid Excel file.";
             return View("FreezePaneForm");
         }
+        [HttpGet]
+        public IActionResult AutoResize()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult UploadAndResize(IFormFile excelFile)
+        {
+            IronXL.License.LicenseKey = "IRONSUITE.EXCELSIORTECHNOLOGIES.8187-3708CDF60F-B3MFZGNEBBLCW6W5-BXTNM4MPHNMU-OTOEBFCLRDSW-ETTEAFOQHJNT-KBYQIADCMQPR-QVRLMSV47S2Q-GLWMCW-TRH25WCBAZKQUA-SANDBOX-BDIXLR.TRIAL.EXPIRES.27.MAR.2026";
+
+            if (excelFile == null || excelFile.Length == 0)
+            {
+                TempData["Message"] = "Please select a valid Excel file.";
+                return RedirectToAction("AutoResize");
+            }
+
+            try
+            {
+                // Create files directory if not exists
+                string filesDir = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "files");
+                if (!Directory.Exists(filesDir))
+                    Directory.CreateDirectory(filesDir);
+
+                string fileName = Path.GetFileName(excelFile.FileName);
+                string filePath = Path.Combine(filesDir, fileName);
+                string resizedPath = Path.Combine(filesDir, "resized_" + fileName);
+
+                // Save uploaded file
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    excelFile.CopyTo(stream);
+                }
+
+                // Load and auto-resize
+                WorkBook workBook = WorkBook.Load(filePath);
+                WorkSheet workSheet = workBook.DefaultWorkSheet;
+
+                // Apply auto-resize
+                workSheet.AutoSizeRow(1);          // Row 2
+                workSheet.AutoSizeColumn(0);       // Column A
+                workSheet.AutoSizeColumn(3, true); // Column D with autofit
+
+                workBook.SaveAs(resizedPath);
+
+                TempData["Message"] = "File uploaded and resized successfully!";
+                TempData["DownloadPath"] = "/files/resized_" + fileName;
+            }
+            catch (Exception ex)
+            {
+                TempData["Message"] = "Error: " + ex.Message;
+            }
+
+            return RedirectToAction("AutoResize");
+        }
+
 
     }
 }

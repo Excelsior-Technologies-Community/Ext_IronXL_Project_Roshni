@@ -17,6 +17,78 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "F:\\Company Work\\Ext_IronXL_Project\\wwwroot\\files\\Book 6 (3).xlsx",
+      "PackagePath": "staticwebassets\\files\\Book 6 (3).xlsx"
+    },
+    {
+      "Id": "F:\\Company Work\\Ext_IronXL_Project\\wwwroot\\files\\Book 6.xlsx",
+      "PackagePath": "staticwebassets\\files\\Book 6.xlsx"
+    },
+    {
+      "Id": "F:\\Company Work\\Ext_IronXL_Project\\wwwroot\\files\\CustomerReport.xlsx",
+      "PackagePath": "staticwebassets\\files\\CustomerReport.xlsx"
+    },
+    {
+      "Id": "F:\\Company Work\\Ext_IronXL_Project\\wwwroot\\files\\Ginger.jpg",
+      "PackagePath": "staticwebassets\\files\\Ginger.jpg"
+    },
+    {
+      "Id": "F:\\Company Work\\Ext_IronXL_Project\\wwwroot\\files\\RegisterTable_Data.xlsx",
+      "PackagePath": "staticwebassets\\files\\RegisterTable_Data.xlsx"
+    },
+    {
+      "Id": "F:\\Company Work\\Ext_IronXL_Project\\wwwroot\\files\\RegisterTable_Data_protected.xlsx",
+      "PackagePath": "staticwebassets\\files\\RegisterTable_Data_protected.xlsx"
+    },
+    {
+      "Id": "F:\\Company Work\\Ext_IronXL_Project\\wwwroot\\files\\Tables.xlsx",
+      "PackagePath": "staticwebassets\\files\\Tables.xlsx"
+    },
+    {
+      "Id": "F:\\Company Work\\Ext_IronXL_Project\\wwwroot\\files\\grouped_RegisterTable_Data.xlsx",
+      "PackagePath": "staticwebassets\\files\\grouped_RegisterTable_Data.xlsx"
+    },
+    {
+      "Id": "F:\\Company Work\\Ext_IronXL_Project\\wwwroot\\files\\modified_sample.xlsx",
+      "PackagePath": "staticwebassets\\files\\modified_sample.xlsx"
+    },
+    {
+      "Id": "F:\\Company Work\\Ext_IronXL_Project\\wwwroot\\files\\newbook_RegisterTable_Data_protected.xlsx",
+      "PackagePath": "staticwebassets\\files\\newbook_RegisterTable_Data_protected.xlsx"
+    },
+    {
+      "Id": "F:\\Company Work\\Ext_IronXL_Project\\wwwroot\\files\\repeat_Tables.xlsx",
+      "PackagePath": "staticwebassets\\files\\repeat_Tables.xlsx"
+    },
+    {
+      "Id": "F:\\Company Work\\Ext_IronXL_Project\\wwwroot\\files\\resized_Book 6 (3).xlsx",
+      "PackagePath": "staticwebassets\\files\\resized_Book 6 (3).xlsx"
+    },
+    {
+      "Id": "F:\\Company Work\\Ext_IronXL_Project\\wwwroot\\files\\resized_RegisterTable_Data_protected.xlsx",
+      "PackagePath": "staticwebassets\\files\\resized_RegisterTable_Data_protected.xlsx"
+    },
+    {
+      "Id": "F:\\Company Work\\Ext_IronXL_Project\\wwwroot\\files\\same_RegisterTable_Data_protected.xlsx",
+      "PackagePath": "staticwebassets\\files\\same_RegisterTable_Data_protected.xlsx"
+    },
+    {
+      "Id": "F:\\Company Work\\Ext_IronXL_Project\\wwwroot\\files\\sample (2).xlsx",
+      "PackagePath": "staticwebassets\\files\\sample (2).xlsx"
+    },
+    {
+      "Id": "F:\\Company Work\\Ext_IronXL_Project\\wwwroot\\files\\sample.xlsx",
+      "PackagePath": "staticwebassets\\files\\sample.xlsx"
+    },
+    {
+      "Id": "F:\\Company Work\\Ext_IronXL_Project\\wwwroot\\files\\updated_sample.xlsx",
+      "PackagePath": "staticwebassets\\files\\updated_sample.xlsx"
+    },
+    {
+      "Id": "F:\\Company Work\\Ext_IronXL_Project\\wwwroot\\files\\updated_updated_sample.xlsx",
+      "PackagePath": "staticwebassets\\files\\updated_updated_sample.xlsx"
+    },
+    {
       "Id": "F:\\Company Work\\Ext_IronXL_Project\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

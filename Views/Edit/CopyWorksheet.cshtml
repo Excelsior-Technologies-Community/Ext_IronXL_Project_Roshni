@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewData["Title"] = "CopyWorksheet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Copy Excel Worksheet</h2>
+
+<form asp-controller="Edit" asp-action="CopyWorksheet" method="post" enctype="multipart/form-data">
+    <div>
+        <label>Select Excel File:</label>
+        <input type="file" name="excelFile" accept=".xlsx" required />
+    </div>
+    <br />
+    <div>
+        <label>Name for the Copied Sheet (same workbook):</label>
+        <input type="text" name="sameBookSheetName" required />
+    </div>
+    <br />
+    <div>
+        <label>Name for the Sheet in New Workbook:</label>
+        <input type="text" name="newBookSheetName" required />
+    </div>
+    <br />
+    <button type="submit">Copy Worksheet</button>
+</form>
+
+@if (TempData["Message"] != null)
+{
+    <p style="color: green">@TempData["Message"]</p>
+}
+@if (TempData["SameBookPath"] != null)
+{
+    <p><a href="@TempData["SameBookPath"]" download>Download Same Workbook</a></p>
+}
+@if (TempData["NewBookPath"] != null)
+{
+    <p><a href="@TempData["NewBookPath"]" download>Download New Workbook</a></p>
+}

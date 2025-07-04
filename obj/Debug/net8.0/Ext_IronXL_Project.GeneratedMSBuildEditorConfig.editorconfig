@@ -26,12 +26,36 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = F:\Company Work\Ext_IronXL_Project
 build_property._RazorSourceGeneratorDebug = 
 
+[F:/Company Work/Ext_IronXL_Project/Views/Edit/CopyWorksheet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWRpdFxDb3B5V29ya3NoZWV0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Company Work/Ext_IronXL_Project/Views/Edit/GroupUngroup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWRpdFxHcm91cFVuZ3JvdXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Company Work/Ext_IronXL_Project/Views/Edit/InsertRowsColumns.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWRpdFxJbnNlcnRSb3dzQ29sdW1ucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Company Work/Ext_IronXL_Project/Views/Edit/RepeatRowsColumns.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWRpdFxSZXBlYXRSb3dzQ29sdW1ucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/Company Work/Ext_IronXL_Project/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/Company Work/Ext_IronXL_Project/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Company Work/Ext_IronXL_Project/Views/Images/AddImageToExcel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW1hZ2VzXEFkZEltYWdlVG9FeGNlbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Company Work/Ext_IronXL_Project/Views/Images/RemoveImages.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW1hZ2VzXFJlbW92ZUltYWdlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/Company Work/Ext_IronXL_Project/Views/Objects/DataGrid.cshtml]
@@ -80,6 +104,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [F:/Company Work/Ext_IronXL_Project/Views/Spreadsheets/SqlToExcel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ByZWFkc2hlZXRzXFNxbFRvRXhjZWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Company Work/Ext_IronXL_Project/Views/Worksheets/AutoResize.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya3NoZWV0c1xBdXRvUmVzaXplLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/Company Work/Ext_IronXL_Project/Views/Worksheets/CreateChart.cshtml]

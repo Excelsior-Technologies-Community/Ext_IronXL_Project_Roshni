@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "AddImageToExcel";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="AddImageToExcel" method="post" enctype="multipart/form-data">
+    <div>
+        <label>Select Excel File (.xlsx):</label>
+        <input type="file" name="excelFile" accept=".xlsx" required />
+    </div>
+    <div>
+        <label>Select Image File (.jpg, .png):</label>
+        <input type="file" name="imageFile" accept=".jpg,.png" required />
+    </div>
+    <br />
+    <button type="submit">Upload and Insert Image</button>
+</form>
+
+@if (TempData["DownloadLink"] != null)
+{
+    <p style="color:green;">Image inserted successfully!</p>
+    <a href="@TempData["DownloadLink"]" download>Download Updated Excel</a>
+}

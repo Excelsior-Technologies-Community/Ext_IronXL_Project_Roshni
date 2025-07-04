@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewData["Title"] = "AutoResize";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <h2>Upload Excel File and Auto-Resize Columns/Rows</h2>
+
+    @if (TempData["Message"] != null)
+    {
+        <div class="alert alert-info mt-3">
+            @TempData["Message"]
+        </div>
+    }
+
+    <form asp-controller="Worksheets" asp-action="UploadAndResize" method="post" enctype="multipart/form-data" class="mt-3">
+        <div class="form-group">
+            <label for="excelFile">Select Excel File:</label>
+            <input type="file" name="excelFile" class="form-control" required />
+        </div>
+        <button type="submit" class="btn btn-primary mt-2">Upload & Resize</button>
+    </form>
+
+    @if (TempData["DownloadPath"] != null)
+    {
+        <div class="mt-4">
+            <a href="@TempData["DownloadPath"]" class="btn btn-success" download>Download Resized Excel</a>
+        </div>
+    }
+</div>

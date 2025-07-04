@@ -3,40 +3,36 @@
   "WorkspaceRootPath": "F:\\Company Work\\Ext_IronXL_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FCF20CA1-0573-4777-8F16-DA907A2DDDFB}|Ext_IronXL_Project.csproj|f:\\company work\\ext_ironxl_project\\controllers\\worksheetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FCF20CA1-0573-4777-8F16-DA907A2DDDFB}|Ext_IronXL_Project.csproj|solutionrelative:controllers\\worksheetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FCF20CA1-0573-4777-8F16-DA907A2DDDFB}|Ext_IronXL_Project.csproj|f:\\company work\\ext_ironxl_project\\controllers\\imagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCF20CA1-0573-4777-8F16-DA907A2DDDFB}|Ext_IronXL_Project.csproj|solutionrelative:controllers\\imagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FCF20CA1-0573-4777-8F16-DA907A2DDDFB}|Ext_IronXL_Project.csproj|f:\\company work\\ext_ironxl_project\\views\\worksheets\\freezepaneform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FCF20CA1-0573-4777-8F16-DA907A2DDDFB}|Ext_IronXL_Project.csproj|solutionrelative:views\\worksheets\\freezepaneform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FCF20CA1-0573-4777-8F16-DA907A2DDDFB}|Ext_IronXL_Project.csproj|f:\\company work\\ext_ironxl_project\\views\\images\\removeimages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FCF20CA1-0573-4777-8F16-DA907A2DDDFB}|Ext_IronXL_Project.csproj|solutionrelative:views\\images\\removeimages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FCF20CA1-0573-4777-8F16-DA907A2DDDFB}|Ext_IronXL_Project.csproj|f:\\company work\\ext_ironxl_project\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{FCF20CA1-0573-4777-8F16-DA907A2DDDFB}|Ext_IronXL_Project.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FCF20CA1-0573-4777-8F16-DA907A2DDDFB}|Ext_IronXL_Project.csproj|f:\\company work\\ext_ironxl_project\\views\\worksheets\\createchart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FCF20CA1-0573-4777-8F16-DA907A2DDDFB}|Ext_IronXL_Project.csproj|solutionrelative:views\\worksheets\\createchart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FCF20CA1-0573-4777-8F16-DA907A2DDDFB}|Ext_IronXL_Project.csproj|f:\\company work\\ext_ironxl_project\\views\\worksheets\\selectrange.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FCF20CA1-0573-4777-8F16-DA907A2DDDFB}|Ext_IronXL_Project.csproj|solutionrelative:views\\worksheets\\selectrange.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FCF20CA1-0573-4777-8F16-DA907A2DDDFB}|Ext_IronXL_Project.csproj|f:\\company work\\ext_ironxl_project\\views\\worksheets\\sortexcel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FCF20CA1-0573-4777-8F16-DA907A2DDDFB}|Ext_IronXL_Project.csproj|solutionrelative:views\\worksheets\\sortexcel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FCF20CA1-0573-4777-8F16-DA907A2DDDFB}|Ext_IronXL_Project.csproj|f:\\company work\\ext_ironxl_project\\views\\images\\addimagetoexcel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FCF20CA1-0573-4777-8F16-DA907A2DDDFB}|Ext_IronXL_Project.csproj|solutionrelative:views\\images\\addimagetoexcel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FCF20CA1-0573-4777-8F16-DA907A2DDDFB}|Ext_IronXL_Project.csproj|f:\\company work\\ext_ironxl_project\\controllers\\objectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FCF20CA1-0573-4777-8F16-DA907A2DDDFB}|Ext_IronXL_Project.csproj|solutionrelative:controllers\\objectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FCF20CA1-0573-4777-8F16-DA907A2DDDFB}|Ext_IronXL_Project.csproj|f:\\company work\\ext_ironxl_project\\views\\worksheets\\formulaeditor.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FCF20CA1-0573-4777-8F16-DA907A2DDDFB}|Ext_IronXL_Project.csproj|solutionrelative:views\\worksheets\\formulaeditor.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FCF20CA1-0573-4777-8F16-DA907A2DDDFB}|Ext_IronXL_Project.csproj|f:\\company work\\ext_ironxl_project\\controllers\\editcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCF20CA1-0573-4777-8F16-DA907A2DDDFB}|Ext_IronXL_Project.csproj|solutionrelative:controllers\\editcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FCF20CA1-0573-4777-8F16-DA907A2DDDFB}|Ext_IronXL_Project.csproj|f:\\company work\\ext_ironxl_project\\views\\objects\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FCF20CA1-0573-4777-8F16-DA907A2DDDFB}|Ext_IronXL_Project.csproj|solutionrelative:views\\objects\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FCF20CA1-0573-4777-8F16-DA907A2DDDFB}|Ext_IronXL_Project.csproj|f:\\company work\\ext_ironxl_project\\views\\edit\\copyworksheet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FCF20CA1-0573-4777-8F16-DA907A2DDDFB}|Ext_IronXL_Project.csproj|solutionrelative:views\\edit\\copyworksheet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCF20CA1-0573-4777-8F16-DA907A2DDDFB}|Ext_IronXL_Project.csproj|f:\\company work\\ext_ironxl_project\\views\\worksheets\\autoresize.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FCF20CA1-0573-4777-8F16-DA907A2DDDFB}|Ext_IronXL_Project.csproj|solutionrelative:views\\worksheets\\autoresize.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,97 +42,85 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FreezePaneForm.cshtml",
-              "DocumentMoniker": "F:\\Company Work\\Ext_IronXL_Project\\Views\\Worksheets\\FreezePaneForm.cshtml",
-              "RelativeDocumentMoniker": "Views\\Worksheets\\FreezePaneForm.cshtml",
-              "ToolTip": "F:\\Company Work\\Ext_IronXL_Project\\Views\\Worksheets\\FreezePaneForm.cshtml",
-              "RelativeToolTip": "Views\\Worksheets\\FreezePaneForm.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA9AAAAAAAAAA==",
+              "Title": "RemoveImages.cshtml",
+              "DocumentMoniker": "F:\\Company Work\\Ext_IronXL_Project\\Views\\Images\\RemoveImages.cshtml",
+              "RelativeDocumentMoniker": "Views\\Images\\RemoveImages.cshtml",
+              "ToolTip": "F:\\Company Work\\Ext_IronXL_Project\\Views\\Images\\RemoveImages.cshtml",
+              "RelativeToolTip": "Views\\Images\\RemoveImages.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-03T12:14:04.72Z",
+              "WhenOpened": "2025-07-04T11:30:22.524Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "CreateChart.cshtml",
-              "DocumentMoniker": "F:\\Company Work\\Ext_IronXL_Project\\Views\\Worksheets\\CreateChart.cshtml",
-              "RelativeDocumentMoniker": "Views\\Worksheets\\CreateChart.cshtml",
-              "ToolTip": "F:\\Company Work\\Ext_IronXL_Project\\Views\\Worksheets\\CreateChart.cshtml",
-              "RelativeToolTip": "Views\\Worksheets\\CreateChart.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA5AAAAAAAAAA==",
+              "Title": "AddImageToExcel.cshtml",
+              "DocumentMoniker": "F:\\Company Work\\Ext_IronXL_Project\\Views\\Images\\AddImageToExcel.cshtml",
+              "RelativeDocumentMoniker": "Views\\Images\\AddImageToExcel.cshtml",
+              "ToolTip": "F:\\Company Work\\Ext_IronXL_Project\\Views\\Images\\AddImageToExcel.cshtml",
+              "RelativeToolTip": "Views\\Images\\AddImageToExcel.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-03T11:21:27.584Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SelectRange.cshtml",
-              "DocumentMoniker": "F:\\Company Work\\Ext_IronXL_Project\\Views\\Worksheets\\SelectRange.cshtml",
-              "RelativeDocumentMoniker": "Views\\Worksheets\\SelectRange.cshtml",
-              "ToolTip": "F:\\Company Work\\Ext_IronXL_Project\\Views\\Worksheets\\SelectRange.cshtml",
-              "RelativeToolTip": "Views\\Worksheets\\SelectRange.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-03T10:23:08.396Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SortExcel.cshtml",
-              "DocumentMoniker": "F:\\Company Work\\Ext_IronXL_Project\\Views\\Worksheets\\SortExcel.cshtml",
-              "RelativeDocumentMoniker": "Views\\Worksheets\\SortExcel.cshtml",
-              "ToolTip": "F:\\Company Work\\Ext_IronXL_Project\\Views\\Worksheets\\SortExcel.cshtml",
-              "RelativeToolTip": "Views\\Worksheets\\SortExcel.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-03T09:00:46.959Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "FormulaEditor.cshtml",
-              "DocumentMoniker": "F:\\Company Work\\Ext_IronXL_Project\\Views\\Worksheets\\FormulaEditor.cshtml",
-              "RelativeDocumentMoniker": "Views\\Worksheets\\FormulaEditor.cshtml",
-              "ToolTip": "F:\\Company Work\\Ext_IronXL_Project\\Views\\Worksheets\\FormulaEditor.cshtml",
-              "RelativeToolTip": "Views\\Worksheets\\FormulaEditor.cshtml",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-03T05:39:05.155Z",
+              "WhenOpened": "2025-07-04T11:07:31.783Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "WorksheetsController.cs",
-              "DocumentMoniker": "F:\\Company Work\\Ext_IronXL_Project\\Controllers\\WorksheetsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\WorksheetsController.cs",
-              "ToolTip": "F:\\Company Work\\Ext_IronXL_Project\\Controllers\\WorksheetsController.cs",
-              "RelativeToolTip": "Controllers\\WorksheetsController.cs",
-              "ViewState": "AgIAABUBAAAAAAAAAAAqwB8BAAAAAAAAAAAAAA==",
+              "Title": "ImagesController.cs",
+              "DocumentMoniker": "F:\\Company Work\\Ext_IronXL_Project\\Controllers\\ImagesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ImagesController.cs",
+              "ToolTip": "F:\\Company Work\\Ext_IronXL_Project\\Controllers\\ImagesController.cs",
+              "RelativeToolTip": "Controllers\\ImagesController.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAqwDoAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-03T05:37:23.243Z",
+              "WhenOpened": "2025-07-04T11:05:12.531Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Update.cshtml",
-              "DocumentMoniker": "F:\\Company Work\\Ext_IronXL_Project\\Views\\Objects\\Update.cshtml",
-              "RelativeDocumentMoniker": "Views\\Objects\\Update.cshtml",
-              "ToolTip": "F:\\Company Work\\Ext_IronXL_Project\\Views\\Objects\\Update.cshtml",
-              "RelativeToolTip": "Views\\Objects\\Update.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "CopyWorksheet.cshtml",
+              "DocumentMoniker": "F:\\Company Work\\Ext_IronXL_Project\\Views\\Edit\\CopyWorksheet.cshtml",
+              "RelativeDocumentMoniker": "Views\\Edit\\CopyWorksheet.cshtml",
+              "ToolTip": "F:\\Company Work\\Ext_IronXL_Project\\Views\\Edit\\CopyWorksheet.cshtml",
+              "RelativeToolTip": "Views\\Edit\\CopyWorksheet.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-02T10:11:13.749Z"
+              "WhenOpened": "2025-07-04T10:29:54.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EditController.cs",
+              "DocumentMoniker": "F:\\Company Work\\Ext_IronXL_Project\\Controllers\\EditController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EditController.cs",
+              "ToolTip": "F:\\Company Work\\Ext_IronXL_Project\\Controllers\\EditController.cs",
+              "RelativeToolTip": "Controllers\\EditController.cs",
+              "ViewState": "AgIAABEBAAAAAAAAAAAAAOUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T05:17:14.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AutoResize.cshtml",
+              "DocumentMoniker": "F:\\Company Work\\Ext_IronXL_Project\\Views\\Worksheets\\AutoResize.cshtml",
+              "RelativeDocumentMoniker": "Views\\Worksheets\\AutoResize.cshtml",
+              "ToolTip": "F:\\Company Work\\Ext_IronXL_Project\\Views\\Worksheets\\AutoResize.cshtml",
+              "RelativeToolTip": "Views\\Worksheets\\AutoResize.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-04T03:37:31.899Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -146,14 +130,14 @@
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
               "ToolTip": "F:\\Company Work\\Ext_IronXL_Project\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAAD8AAABoAAAAAAAAAA==",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAUwFoAAACMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-07-01T11:11:31.804Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "ObjectsController.cs",
               "DocumentMoniker": "F:\\Company Work\\Ext_IronXL_Project\\Controllers\\ObjectsController.cs",
               "RelativeDocumentMoniker": "Controllers\\ObjectsController.cs",

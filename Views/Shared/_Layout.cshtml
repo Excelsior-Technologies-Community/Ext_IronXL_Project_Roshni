@@ -62,7 +62,37 @@
                                 <li><a class="nav-link text-dark" asp-area="" asp-controller="Worksheets" asp-action="SelectRange">SelectRange</a></li>
                                 <li><a class="nav-link text-dark" asp-area="" asp-controller="Worksheets" asp-action="CreateChart">CreateChart</a></li>
                                 <li><a class="nav-link text-dark" asp-area="" asp-controller="Worksheets" asp-action="FreezePaneForm">FreezePaneForm</a></li>
-                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Worksheets" asp-action="PrintSetup">PrintSetup</a></li>
+                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Worksheets" asp-action="AutoResize">AutoResize</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="rsDocumentDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Edit Excel
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="rsDocumentDropdown">
+                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Edit" asp-action="InsertRowsColumns">InsertRowsColumns</a></li>
+                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Edit" asp-action="GroupUngroup">GroupUngroup</a></li>
+                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Edit" asp-action="RepeatRowsColumns">RepeatRowsColumns</a></li>
+                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Edit" asp-action="CopyWorksheet">CopyWorksheet</a></li>
+                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Edit" asp-action="ProtectExcel">ProtectExcel</a></li>
+                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Edit" asp-action="PrintSetup">PrintSetup</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="rsDocumentDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Images 
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="rsDocumentDropdown">
+                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Images" asp-action="AddImageToExcel">AddImageToExcel</a></li>
+                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Images" asp-action="RemoveImages">RemoveImages</a></li>
+                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Images" asp-action="RepeatRowsColumns">RepeatRowsColumns</a></li>
+                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Images" asp-action="CopyWorksheet">CopyWorksheet</a></li>
+                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Images" asp-action="ProtectExcel">ProtectExcel</a></li>
+                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Images" asp-action="PrintSetup">PrintSetup</a></li>
 
                             </ul>
                         </li>
