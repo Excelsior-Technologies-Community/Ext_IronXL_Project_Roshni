@@ -1,4 +1,8 @@
+using OfficeOpenXml;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.Configure<ExcelPackage>(builder.Configuration.GetSection("EPPlus"));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

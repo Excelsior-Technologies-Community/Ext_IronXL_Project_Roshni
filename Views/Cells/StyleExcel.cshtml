@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "StyleExcel";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Style Excel Cells</h2>
+
+@if (TempData["Error"] != null)
+{
+    <div style="color:red">@TempData["Error"]</div>
+}
+@if (TempData["Success"] != null)
+{
+    <div style="color:green">@TempData["Success"]</div>
+}
+
+<form asp-action="StyleExcel" method="post" enctype="multipart/form-data">
+    <div>
+        <label>Upload Excel File:</label>
+        <input type="file" name="excelFile" required />
+    </div>
+    <br />
+    <button type="submit">Apply Styles</button>
+</form>
+
+@if (ViewBag.DownloadLink != null)
+{
+    <div style="margin-top:20px">
+        <a href="@ViewBag.DownloadLink" download>Download Styled Excel File</a>
+    </div>
+}

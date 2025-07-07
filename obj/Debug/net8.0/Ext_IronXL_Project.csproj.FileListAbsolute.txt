@@ -279,3 +279,11 @@ F:\Company Work\Ext_IronXL_Project\bin\Debug\net8.0\runtimes\win-x86\native\Micr
 F:\Company Work\Ext_IronXL_Project\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 F:\Company Work\Ext_IronXL_Project\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 F:\Company Work\Ext_IronXL_Project\obj\Debug\net8.0\Ext_IronXL_Project.sourcelink.json
+F:\Company Work\Ext_IronXL_Project\bin\Debug\net8.0\EPPlus.dll
+F:\Company Work\Ext_IronXL_Project\bin\Debug\net8.0\EPPlus.Interfaces.dll
+F:\Company Work\Ext_IronXL_Project\bin\Debug\net8.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+F:\Company Work\Ext_IronXL_Project\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Json.dll
+F:\Company Work\Ext_IronXL_Project\bin\Debug\net8.0\Microsoft.IO.RecyclableMemoryStream.dll
+F:\Company Work\Ext_IronXL_Project\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+F:\Company Work\Ext_IronXL_Project\bin\Debug\net8.0\System.Security.Cryptography.Xml.dll
+F:\Company Work\Ext_IronXL_Project\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll

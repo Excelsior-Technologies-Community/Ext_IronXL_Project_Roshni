@@ -1,0 +1,50 @@
+﻿@using System.IO
+
+@{
+    ViewData["Title"] = "ExtractImages";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Extract Images from Excel File</h2>
+
+@if (TempData["Error"] != null)
+{
+    <div style="color:red">@TempData["Error"]</div>
+}
+@if (TempData["Message"] != null)
+{
+    <div style="color:green">@TempData["Message"]</div>
+}
+
+<form method="post" enctype="multipart/form-data" asp-action="ExtractImagesFromExcel">
+    <div>
+        <label>Select Excel File:</label>
+        <input type="file" name="excelFile" required />
+    </div>
+    <button type="submit">Extract Images</button>
+</form>
+
+@if (TempData["ImageFolder"] != null)
+{
+    <h3>Extracted Images</h3>
+    <div>
+        @{
+            string folder = TempData["ImageFolder"].ToString();
+            string path = System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory(), "wwwroot", "extracted_images");
+
+            if (System.IO.Directory.Exists(path))
+            {
+                var files = System.IO.Directory.GetFiles(path, "*.png");
+                foreach (var file in files)
+                {
+                    string fileName = System.IO.Path.GetFileName(file);
+                    <div style="display:inline-block; margin:10px">
+                        <img src="@Url.Content($"~/extracted_images/{fileName}")" width="150" />
+                        <p>@fileName</p>
+                    </div>
+                }
+            }
+        }
+
+    </div>
+}

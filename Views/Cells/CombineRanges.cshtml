@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewData["Title"] = "CombineRanges";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Combine Excel Ranges</h2>
+
+@if (TempData["Error"] != null)
+{
+    <div style="color:red">@TempData["Error"]</div>
+}
+@if (TempData["Success"] != null)
+{
+    <div style="color:green">@TempData["Success"]</div>
+}
+
+<form asp-action="CombineRanges" method="post" enctype="multipart/form-data">
+    <div>
+        <label>Upload Excel File:</label>
+        <input type="file" name="excelFile" multiple required />
+    </div>
+    <br />
+    <button type="submit">Combine Ranges</button>
+</form>
+
+@if (ViewBag.RangeValues != null)
+{
+    <h3>Combined Range Values:</h3>
+    <ul>
+        @foreach (var value in ViewBag.RangeValues as List<string>)
+        {
+            <li>@value</li>
+        }
+    </ul>
+}

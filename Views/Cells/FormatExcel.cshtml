@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewData["Title"] = "FormatExcel";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Apply Excel Number Format</h2>
+
+@if (TempData["Error"] != null)
+{
+    <div style="color: red;">@TempData["Error"]</div>
+}
+
+<form asp-action="FormatExcel" method="post" enctype="multipart/form-data">
+    <div>
+        <label>Upload Excel File:</label>
+        <input type="file" name="excelFile" required />
+    </div>
+    <br />
+    <div>
+        <label>Cell Address (e.g., A2):</label>
+        <input type="text" name="cellAddress" placeholder="A2" required />
+    </div>
+    <br />
+    <div>
+        <label>Select Format:</label>
+        <select name="formatString" required>
+            <option value="">-- Select Format --</option>
+            <option value="0.00">Number (2 decimals)</option>
+            <option value="0.0000">Number (4 decimals)</option>
+            <option value="0.0%">Percentage (1 decimal)</option>
+            <option value="MM/dd/yyyy">Date (MM/dd/yyyy)</option>
+            <option value="MM/dd/yy h:mm:ss">DateTime</option>
+        </select>
+    </div>
+    <br />
+    <button type="submit">Apply Format</button>
+</form>
+
+@if (ViewBag.FormattedFilePath != null)
+{
+    <div style="margin-top:20px;">
+        <strong>Formatted Cell:</strong> @ViewBag.CellAddress <br />
+        <strong>Format Applied:</strong> @ViewBag.Format <br />
+        <a href="@ViewBag.FormattedFilePath" target="_blank">Download Formatted Excel File</a>
+    </div>
+}

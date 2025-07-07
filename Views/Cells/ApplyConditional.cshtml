@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewData["Title"] = "ApplyConditional";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Excel Conditional Formatting</h2>
+
+@if (TempData["Error"] != null)
+{
+    <div style="color:red;">@TempData["Error"]</div>
+}
+
+<form asp-action="ApplyConditional" method="post" enctype="multipart/form-data">
+    <div>
+        <label>Upload Excel File:</label>
+        <input type="file" name="excelFile" required />
+    </div>
+    <div>
+        <label>Cell Range (e.g. A2:A10):</label>
+        <input type="text" name="range" placeholder="A2:A10" required />
+    </div>
+    <div>
+        <label>Operator:</label>
+        <select name="operatorType" required>
+            <option value="Equal">Equal</option>
+            <option value="GreaterThan">Greater Than</option>
+            <option value="LessThan">Less Than</option>
+            <option value="Between">Between</option>
+            <option value="NotEqual">Not Equal</option>
+        </select>
+    </div>
+    <div>
+        <label>Value 1:</label>
+        <input type="text" name="value1" required />
+    </div>
+    <div>
+        <label>Value 2 (only for 'Between'):</label>
+        <input type="text" name="value2" />
+    </div>
+    <div>
+        <label>Background Color (hex):</label>
+        <input type="text" name="backgroundColor" placeholder="#FFFF00" />
+    </div>
+    <div>
+        <label>Font Color (hex):</label>
+        <input type="text" name="fontColor" placeholder="#FF0000" />
+    </div>
+    <br />
+    <button type="submit">Apply Conditional Formatting</button>
+</form>
+
+@if (ViewBag.DownloadLink != null)
+{
+    <div style="margin-top: 20px;">
+        <p><strong>Applied to Range:</strong> @ViewBag.Range</p>
+        <p><strong>Condition:</strong> @ViewBag.Operator</p>
+        <a href="@ViewBag.DownloadLink" class="btn btn-success" download>Download Formatted Excel</a>
+    </div>
+}

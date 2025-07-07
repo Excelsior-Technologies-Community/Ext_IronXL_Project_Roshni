@@ -89,13 +89,25 @@
                             <ul class="dropdown-menu" aria-labelledby="rsDocumentDropdown">
                                 <li><a class="nav-link text-dark" asp-area="" asp-controller="Images" asp-action="AddImageToExcel">AddImageToExcel</a></li>
                                 <li><a class="nav-link text-dark" asp-area="" asp-controller="Images" asp-action="RemoveImages">RemoveImages</a></li>
-                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Images" asp-action="RepeatRowsColumns">RepeatRowsColumns</a></li>
-                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Images" asp-action="CopyWorksheet">CopyWorksheet</a></li>
-                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Images" asp-action="ProtectExcel">ProtectExcel</a></li>
-                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Images" asp-action="PrintSetup">PrintSetup</a></li>
-
+                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Images" asp-action="ExtractImages">ExtractImages</a></li>
+                                
                             </ul>
                         </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="rsDocumentDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Cells
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="rsDocumentDropdown">
+                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Cells" asp-action="CombineRanges">CombineRanges</a></li>
+                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Cells" asp-action="StyleExcel">StyleExcel</a></li>
+                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Cells" asp-action="Analyze">Analyze</a></li>
+                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Cells" asp-action="FormatExcel">FormatExcel</a></li>
+                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Cells" asp-action="ApplyConditional">ApplyConditional</a></li>
+                                
+                            </ul>
+                        </li>
+
                     </ul>
                 </div>
             </div>

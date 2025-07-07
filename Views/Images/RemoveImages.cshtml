@@ -6,17 +6,29 @@
 
 <h2>@ViewData["Title"]</h2>
 
-<form asp-action="RemoveImages" method="post" enctype="multipart/form-data">
+<form method="post" enctype="multipart/form-data" asp-action="RemoveImages">
     <div>
-        <label>Select Excel File (.xlsx):</label>
+        <label>Select Excel File (.xlsx)</label><br />
         <input type="file" name="excelFile" accept=".xlsx" required />
     </div>
     <br />
-    <button type="submit">Upload and Remove Images</button>
+    <button type="submit">Upload & Remove Images</button>
 </form>
+
+<br />
+@if (TempData["Error"] != null)
+{
+    <div style="color: red;">@TempData["Error"]</div>
+}
+
+@if (TempData["Message"] != null)
+{
+    <div style="color: green;">@TempData["Message"]</div>
+}
 
 @if (TempData["DownloadLink"] != null)
 {
-    <p style="color:green;">Images removed successfully!</p>
-    <a href="@TempData["DownloadLink"]" download>Download Updated Excel</a>
+    <div>
+        <a href="@TempData["DownloadLink"]" download>Download Updated Excel File</a>
+    </div>
 }

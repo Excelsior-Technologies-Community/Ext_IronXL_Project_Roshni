@@ -26,6 +26,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = F:\Company Work\Ext_IronXL_Project
 build_property._RazorSourceGeneratorDebug = 
 
+[F:/Company Work/Ext_IronXL_Project/Views/Cells/Analyze.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2VsbHNcQW5hbHl6ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Company Work/Ext_IronXL_Project/Views/Cells/ApplyConditional.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2VsbHNcQXBwbHlDb25kaXRpb25hbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Company Work/Ext_IronXL_Project/Views/Cells/CombineRanges.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2VsbHNcQ29tYmluZVJhbmdlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Company Work/Ext_IronXL_Project/Views/Cells/FormatExcel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2VsbHNcRm9ybWF0RXhjZWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Company Work/Ext_IronXL_Project/Views/Cells/StyleExcel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2VsbHNcU3R5bGVFeGNlbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/Company Work/Ext_IronXL_Project/Views/Edit/CopyWorksheet.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWRpdFxDb3B5V29ya3NoZWV0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -52,6 +72,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [F:/Company Work/Ext_IronXL_Project/Views/Images/AddImageToExcel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW1hZ2VzXEFkZEltYWdlVG9FeGNlbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Company Work/Ext_IronXL_Project/Views/Images/ExtractImages.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW1hZ2VzXEV4dHJhY3RJbWFnZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/Company Work/Ext_IronXL_Project/Views/Images/RemoveImages.cshtml]

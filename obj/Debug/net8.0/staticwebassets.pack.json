@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\downloads\\edited_sample.xlsx"
     },
     {
+      "Id": "F:\\Company Work\\Ext_IronXL_Project\\wwwroot\\extracted_images\\image_1.png",
+      "PackagePath": "staticwebassets\\extracted_images\\image_1.png"
+    },
+    {
       "Id": "F:\\Company Work\\Ext_IronXL_Project\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
@@ -87,6 +91,10 @@
     {
       "Id": "F:\\Company Work\\Ext_IronXL_Project\\wwwroot\\files\\updated_updated_sample.xlsx",
       "PackagePath": "staticwebassets\\files\\updated_updated_sample.xlsx"
+    },
+    {
+      "Id": "F:\\Company Work\\Ext_IronXL_Project\\wwwroot\\files\\updated_updated_updated_sample.xlsx",
+      "PackagePath": "staticwebassets\\files\\updated_updated_updated_sample.xlsx"
     },
     {
       "Id": "F:\\Company Work\\Ext_IronXL_Project\\wwwroot\\js\\site.js",
@@ -319,6 +327,26 @@
     {
       "Id": "F:\\Company Work\\Ext_IronXL_Project\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "F:\\Company Work\\Ext_IronXL_Project\\wwwroot\\uploads\\Book 6 (3).xlsx",
+      "PackagePath": "staticwebassets\\uploads\\Book 6 (3).xlsx"
+    },
+    {
+      "Id": "F:\\Company Work\\Ext_IronXL_Project\\wwwroot\\uploads\\RegisterTable_Data.xlsx",
+      "PackagePath": "staticwebassets\\uploads\\RegisterTable_Data.xlsx"
+    },
+    {
+      "Id": "F:\\Company Work\\Ext_IronXL_Project\\wwwroot\\uploads\\RegisterTable_Data_protected.xlsx",
+      "PackagePath": "staticwebassets\\uploads\\RegisterTable_Data_protected.xlsx"
+    },
+    {
+      "Id": "F:\\Company Work\\Ext_IronXL_Project\\wwwroot\\uploads\\formatted_RegisterTable_Data.xlsx",
+      "PackagePath": "staticwebassets\\uploads\\formatted_RegisterTable_Data.xlsx"
+    },
+    {
+      "Id": "F:\\Company Work\\Ext_IronXL_Project\\wwwroot\\uploads\\styled_RegisterTable_Data_protected.xlsx",
+      "PackagePath": "staticwebassets\\uploads\\styled_RegisterTable_Data_protected.xlsx"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Ext_IronXL_Project.Microsoft.AspNetCore.StaticWebAssets.props",

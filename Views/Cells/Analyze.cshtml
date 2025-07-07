@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewData["Title"] = "Analyze";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Upload Excel File & Calculate Aggregate</h2>
+
+@if (TempData["Error"] != null)
+{
+    <div style="color: red;">@TempData["Error"]</div>
+}
+
+@if (ViewBag.Result != null)
+{
+    <div style="margin-top: 20px">
+        <strong>File:</strong> @ViewBag.FileName<br />
+        <strong>Range:</strong> @ViewBag.Range<br />
+        <strong>@ViewBag.FunctionLabel:</strong> @ViewBag.Result
+    </div>
+}
+
+<form asp-action="Analyze" method="post" enctype="multipart/form-data">
+    <div>
+        <label>Select Excel File:</label>
+        <input type="file" name="excelFile" required />
+    </div>
+    <br />
+    <div>
+        <label>Enter Cell Range (e.g., A1:A10):</label>
+        <input type="text" name="cellRange" placeholder="A1:A10" required />
+    </div>
+    <br />
+    <div>
+        <label>Select Aggregate Function:</label>
+        <select name="functionType" required>
+            <option value="">-- Select Function --</option>
+            <option value="Sum">Sum</option>
+            <option value="Average">Average</option>
+            <option value="Max">Maximum</option>
+            <option value="Min">Minimum</option>
+        </select>
+    </div>
+    <br />
+    <button type="submit">Upload & Calculate</button>
+</form>
